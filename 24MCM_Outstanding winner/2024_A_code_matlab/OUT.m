@@ -1,0 +1,30 @@
+X0=8.88;
+Y0=4.89*10^9;
+X=[X1' X2'];
+X=X';
+Y=[Y1' Y2'];
+Y=Y';
+XX=(X0-X)/X0;
+YY=(Y0-Y)/Y0;
+Z=[XX YY];
+out=[];
+A=Z;
+n=size(A,1);%获取行数
+minA = min(A); %获取极小值
+maxA = max(A);%获取极大值
+out = (A-repmat(minA,n,1))./repmat(maxA-minA,n,1);%使用repmat对每个元素进行重复处理，记得这里一定要用./
+out
+
+% out1=[];
+% out2=[];
+% A=XX;
+% n=size(A,1);%获取行数
+% minA = min(A); %获取极小值
+% maxA = max(A);%获取极大值
+% out1 = (A-repmat(minA,n,1))./repmat(maxA-minA,n,1);%使用repmat对每个元素进行重复处理，记得这里一定要用./
+% A=YY;
+% n=size(A,1);%获取行数
+% minA = min(A); %获取极小值
+% maxA = max(A);%获取极大值
+% out = (A-repmat(minA,n,1))./repmat(maxA-minA,n,1);%使用repmat对每个元素进行重复处理，记得这里一定要用./
+% out2=[];

@@ -1,0 +1,11 @@
+a=ans.guiyihuazhi;
+a0=a(1:100,:);
+a1=a(101:200,:);
+a2=a(201:300,:);
+w=[0.4136;0.5864];
+mean(a0)
+mean(a1)
+mean(a2)
+mean(a0)*w
+mean(a1)*w
+mean(a2)*w
